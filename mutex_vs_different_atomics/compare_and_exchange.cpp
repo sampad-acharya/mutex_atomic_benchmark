@@ -105,11 +105,11 @@ int main() {
     std::cout << "Threads: " << threads << " | Iters: " << iters << "\n";
     std::cout << "--------------------------------------------------\n";
 
-    run_benchmark<MutexLock>("Standard Mutex          ", threads, iters);
+    run_benchmark<MutexLock>("Standard Mutex              ", threads, iters);
     run_benchmark<AtomicFetchAddRelaxed>("Atomic fetch_add (Relaxed)  ", threads, iters);
     run_benchmark<AtomicFetchAddSeqCst>("Atomic fetch_add (Seq_Cst)  ", threads, iters);
-    run_benchmark<AtomicCASRelaxed>("Atomic CAS (Relaxed)    ", threads, iters);
-    run_benchmark<AtomicCASStrict>("Atomic CAS (Seq_Cst)    ", threads, iters);
+    run_benchmark<AtomicCASRelaxed>("Atomic CAS (Relaxed)        ", threads, iters);
+    run_benchmark<AtomicCASStrict>("Atomic CAS (Seq_Cst)        ", threads, iters);
 
     return 0;
 }
